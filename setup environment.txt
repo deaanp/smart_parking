@@ -1,0 +1,11 @@
+Total Slot : 50
+Terisi : 32
+Kosong : 18
+
+Mobil Masuk : 120
+Mobil Keluar : 88
+
+Jenis Kendaraan:
+SUV : 15
+Sedan : 10
+MPV : 7
