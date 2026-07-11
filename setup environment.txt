@@ -1,0 +1,131 @@
+==========================================
+SMART PARKING SYSTEM
+Environment Setup
+==========================================
+
+1. Clone repository
+
+git clone https://github.com/USERNAME/smart-parking.git
+
+cd smart-parking
+
+
+------------------------------------------
+
+2. Upgrade pip
+
+python -m pip install --upgrade pip
+
+------------------------------------------
+
+3. Install Dependencies
+
+pip install -r requirements.txt
+
+------------------------------------------
+
+4. Install PyTorch
+
+CPU Version
+
+pip install torch torchvision
+
+GPU Version (CUDA)
+
+Follow the official installation guide:
+
+https://pytorch.org/get-started/locally/
+
+------------------------------------------
+
+5. Project Structure
+
+smart-parking/
+
+│
+├── configs/
+│   ├── slots.json
+│   └── slots_scaled.json
+│
+├── models/
+│   ├── detector/
+│   │    └── best.pt
+│   └── vehicle_type_detector/
+│        └── best.pt
+│
+├── snapshots/
+│
+├── logs/
+│
+├── videos/
+│   └── parkinglot.mp4
+│
+├── src/
+│   ├── download_dataset_roboflow.py
+|   ├── events.py
+|   ├── extract_frames.py
+│   ├── occupancy.py
+│   ├── resize_slots.py
+│   ├── slot_annotation.py
+|   ├── test_detector.py
+|   ├── test_occupancy.py
+|   ├── test_tracking.py
+│   ├── tracker.py
+│   ├── train_car_type.py
+│   ├── train_detector.py
+│   └── vehicle_classifier.py
+│
+└── requirements.txt
+
+------------------------------------------
+
+7. Run Project
+
+cd src
+
+python test_occupancy.py
+
+------------------------------------------
+
+Output
+
+The system will display:
+
+• Vehicle Detection
+• Vehicle Tracking
+• Parking Slot Assignment
+• Parking Occupancy
+• Vehicle Type Classification
+• Entry / Exit Detection
+• Event Log
+• Snapshot Log
+• Dashboard
+
+------------------------------------------
+
+Python Version
+
+Recommended:
+Python 3.11
+
+------------------------------------------
+
+YOLO Models
+
+Place the trained models inside:
+
+models/detector/best.pt
+
+models/vehicle_type_detector/best.pt
+
+------------------------------------------
+
+Dataset
+
+This project uses:
+
+• CCTV parking dataset for vehicle detection
+• Custom parking slot annotations
+• Custom vehicle type dataset (SUV, MPV, Sedan, etc.)
+
+------------------------------------------
